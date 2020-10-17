@@ -10,9 +10,39 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+    # +++ VERSÃO 3 +++
+def divide(d):
+    divide = len(d) // 2
+    if len(d) % 2 != 0:
+        divide += 1
+    return divide
+
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    return ''.join((a[:divide(a)], b[:divide(b)], a[divide(a):], a[divide(b):]))
+
+    # +++ VERSÃO 2 +++
+    # if len(a) % 2 == 0 and len(b) % 2 == 0:
+    #    str = ''.join((a[:(int(len(a) / 2))], b[:(int(len(b) / 2))], a[(int(len(a) / 2)):], b[(int(len(b) / 2)):]))
+    #
+    # elif len(a) % 2 == 1 and len(b) % 2 == 1:
+    #    str = ''.join((a[:(int(len(a) / 2 + 1))], b[:(int(len(b) / 2 + 1))], a[(int(len(a) / 2 + 1)):], b[(int(
+    #         len(b) / 2 + 1)):]))
+    #
+    # elif len(a) % 2 == 0 and len(b) % 2 == 1:
+    #    str = ''.join((a[:(int(len(a) / 2))], b[:(int(len(b) / 2 + 1))], a[(int(len(a) / 2)):], b[(int(
+    #         len(b) / 2 + 1)):]))
+    # return str
+
+    # +++ VERSÃO 1 +++
+    # if len(a) % 2 == 0 and len(b) % 2 == 0:
+    #    fb = a[:(int(len(a) / 2))] + b[:(int(len(b) / 2))] + a[(int(len(a) / 2)):] + b[(int(len(b) / 2)):]
+    # elif len(a) % 2 == 1 and len(b) % 2 == 1:
+    #    fb = a[:(int(len(a) / 2 + 1))] + b[:(int(len(b) / 2 + 1))] + a[(int(len(a) / 2 + 1)):] + b[(int(
+    #         len(b) / 2 + 1)):]
+    # elif len(a) % 2 == 0 and len(b) % 2 == 1:
+    #    fb = a[:(int(len(a) / 2))] + b[:(int(len(b) / 2 + 1))] + a[(int(len(a) / 2)):] + b[(int(
+    #         len(b) / 2 + 1)):]
+    # return fb
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
