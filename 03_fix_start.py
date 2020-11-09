@@ -44,3 +44,4 @@ if __name__ == '__main__':
     test(fix_start, 'aardvark', 'a*rdv*rk')
     test(fix_start, 'google', 'goo*le')
     test(fix_start, 'donut', 'donut')
+
