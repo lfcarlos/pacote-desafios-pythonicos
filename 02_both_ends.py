@@ -14,7 +14,6 @@ def both_ends(s):
         end = s[:2] + s[-2:]
     return end
 
-
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):
