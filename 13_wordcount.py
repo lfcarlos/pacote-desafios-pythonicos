@@ -53,10 +53,29 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
+from collections import Counter
+
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
 
+def ler_arquivo(filename):
+    with open(filename, 'r') as arquivo:
+            words = arquivo.read().lower().split()
+            words = Counter(words)
+            return words
+
+def print_words(filename):
+    words = ler_arquivo(filename)
+    for word in sorted(words):
+        print(f'{word}: {words[word]}')
+
+def print_top(filename):
+    words = ler_arquivo(filename)
+    for indice, word in enumerate(sorted(words, key=lambda x: words[x], reverse=True)):
+        print(f'{word}: {words[word]}')
+        if indice == 20:
+            break
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
