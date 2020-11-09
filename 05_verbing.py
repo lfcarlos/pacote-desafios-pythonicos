@@ -45,3 +45,4 @@ if __name__ == '__main__':
     test(verbing, 'hail', 'hailing')
     test(verbing, 'swiming', 'swimingly')
     test(verbing, 'do', 'do')
+
