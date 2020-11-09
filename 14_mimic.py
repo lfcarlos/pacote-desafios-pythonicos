@@ -61,6 +61,7 @@ def dicionario(words):
 
   return dict
 
+
 def mimic_dict(filename):
   """Retorna o dicionario imitador mapeando cada palavra para a lista de
   palavras subsequentes."""
